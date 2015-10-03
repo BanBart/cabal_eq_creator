@@ -258,7 +258,7 @@ DEPENDENCIES
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
-  pg (~> 0.18.3)
+  pg
   puma
   puma_worker_killer
   rails (= 4.2.2)
