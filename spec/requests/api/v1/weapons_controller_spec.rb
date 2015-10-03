@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Api::V1::WeaponsController, type: :controller do
+RSpec.describe Api::V1::WeaponsController, type: :request do
 
   describe "GET #index" do
     it "returns http success" do
