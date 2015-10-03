@@ -127,7 +127,6 @@ GEM
     mini_portile (0.6.2)
     minitest (5.8.1)
     multi_json (1.11.2)
-    mysql2 (0.3.20)
     nenv (0.2.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -137,6 +136,7 @@ GEM
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    pg (0.18.3)
     pry (0.10.2)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -258,7 +258,7 @@ DEPENDENCIES
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2 (~> 0.3.18)
+  pg (~> 0.18.3)
   puma
   puma_worker_killer
   rails (= 4.2.2)
