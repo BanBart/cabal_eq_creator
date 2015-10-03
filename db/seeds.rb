@@ -1,11 +1,11 @@
 weapon_types = [
-  'Blade',
-  'Katana',
-  'Greatsword',
-  'Daikatana',
-  'Orb',
-  'Crystal',
-  'Chakram'
+  'blade',
+  'katana',
+  'greatsword',
+  'daikatana',
+  'orb',
+  'crystal',
+  'chakram'
 ]
 
 weapon_types.each do |weapon_type|
