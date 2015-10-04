@@ -12,8 +12,10 @@ module Requests
       ActionController::HttpAuthentication::Basic.encode_credentials usr, psw
     end
 
-    def http_basic_authentication_header version=1
-      { "HTTP_AUTHORIZATION" => http_authentication, "Accept" => "version=#{version}" }
+    def http_basic_authentication_header version=1, basic_auth = true
+      http_basic = basic_auth ? http_authentication : nil
+      { "HTTP_AUTHORIZATION" => http_basic, "Accept" => "version=#{version}" }
     end
+
   end
 end
