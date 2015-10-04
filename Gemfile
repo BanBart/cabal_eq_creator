@@ -27,6 +27,9 @@ gem 'puma'
 gem 'puma_worker_killer'
 gem "figaro"
 
+
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-10-stable'
+
 group :production do
   gem 'pg', '~> 0.18.3'
   gem 'rails_12factor', '0.0.2'
@@ -46,6 +49,8 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'pry'
+  gem 'pry-remote'
 end
 
 group :test do 
