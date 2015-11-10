@@ -7,6 +7,7 @@ gem 'rails', '4.2.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass', '~> 3.3.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -26,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 gem 'puma_worker_killer'
 gem "figaro"
+
 
 
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-10-stable'
