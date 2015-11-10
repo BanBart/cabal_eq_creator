@@ -1,5 +1,5 @@
 # Change these
-server '46.101.200.162', port: 1200, roles: [:web, :app, :db], primary: true
+server '46.101.207.31', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:BanBart/cabal_eq_creator.git'
 set :application,     'cabal_eq_creator'
