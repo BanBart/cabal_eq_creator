@@ -1,7 +1,7 @@
 # Change these
 lock '3.4.0'
 
-server '54.93.175.183', port: 22, roles: [:web, :app, :db], primary: true
+server '52.28.204.131', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:BanBart/cabal_eq_creator.git'
 set :branch,          :master
