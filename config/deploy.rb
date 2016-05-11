@@ -1,11 +1,17 @@
 # Change these
-server '46.101.207.31', port: 22, roles: [:web, :app, :db], primary: true
+lock '3.4.0'
+
+server '54.93.175.183', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:BanBart/cabal_eq_creator.git'
+set :branch,          :master
 set :application,     'cabal_eq_creator'
 set :user,            'sakyhank'
-set :puma_threads,    [4, 16]
-set :puma_workers,    1
+set :puma_threads,    [0, 8]
+set :puma_workers,    0
+set :keep_releases,   5
+set :rvm_type,        :user
+# set :rvm_ruby_version, 'jruby-1.7.19' 
 
 # Don't change these unless you know what you're doing
 set :pty,             true
@@ -18,6 +24,8 @@ set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
 set :puma_error_log,  "#{release_path}/log/puma.access.log"
+set :puma_role,        :app
+set :puma_env,        fetch(:rack_env, fetch(:rails_env, 'production'))
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
@@ -31,7 +39,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 
 ## Linked Files & Directories (Default None):
 set :linked_files, %w{config/database.yml config/application.yml config/secrets.yml}
-# set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
