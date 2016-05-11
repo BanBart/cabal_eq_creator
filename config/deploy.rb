@@ -6,7 +6,7 @@ server '54.93.175.183', port: 22, roles: [:web, :app, :db], primary: true
 set :repo_url,        'git@github.com:BanBart/cabal_eq_creator.git'
 set :branch,          :master
 set :application,     'cabal_eq_creator'
-set :user,            'sakyhank'
+set :user,            'deploy'
 set :puma_threads,    [0, 8]
 set :puma_workers,    0
 set :keep_releases,   5
